@@ -1,0 +1,15 @@
+<form [formGroup]="cartForm" (ngSubmit)="displayData()">
+
+<div>
+  <input type="text" placeholder="Enter name" formControlName="name" />
+
+</div>
+<br><br>
+<div>
+  <input type="text" placeholder="Enter quantity" formControlName="quantity" />
+
+</div>
+<br><br>
+ <button type="submit">Submit</button>
+
+</form>

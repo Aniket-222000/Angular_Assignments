@@ -1,0 +1,7 @@
+<h1>Routing in Angular</h1>
+
+<app-user (getUsers)="handleUsers($event)"></app-user>
+
+@for(user of users;track user){
+<h1>{{user}}</h1>
+}

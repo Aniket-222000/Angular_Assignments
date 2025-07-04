@@ -1,0 +1,28 @@
+<h2> Assignment 2</h2>
+
+<div *ngIf="userRole === 'guest'; else loggedInBlock">
+  <p>Welcome guest, please continue to the logged in</p>
+</div>
+
+<ng-template #loggedInBlock>
+
+<div [ngSwitch] = "userRole">
+  <p *ngSwitchCase ="'admin'">Hello Admin! You have full access. </p>
+  <p *ngSwitchCase = "'user'"> Welcome back, valued user!</p>
+  <p *ngSwitchDefault> Logged in with an unknown role.</p>
+</div>
+
+</ng-template>
+
+<!-- 
+<div *ngIf="userRole === 'guest'; else loggedInBlock">
+  <p>Welcome, Guest! Please log in to continue.</p>
+</div>
+
+<ng-template #loggedInBlock>
+  <div [ngSwitch]="userRole">
+    <p *ngSwitchCase="'admin'">Hello Admin! You have full access.</p>
+    <p *ngSwitchCase="'user'">Welcome back, valued user!</p>
+    <p *ngSwitchDefault>Logged in with an unknown role.</p>
+  </div>
+</ng-template> -->
