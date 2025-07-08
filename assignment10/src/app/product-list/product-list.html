@@ -1,0 +1,14 @@
+<h2>🛍️ Products</h2>
+
+<ul>
+  <li *ngFor="let product of filteredProducts">
+    {{ product.name }} - <em>{{ product.category }}</em>
+  </li>
+</ul>
+
+<hr>
+
+<p>Filter Links:</p>
+<a [routerLink]="['/products']" [queryParams]="{ category: 'Electronics' }">Electronics</a> |
+<a [routerLink]="['/products']" [queryParams]="{ category: 'Books' }">Books</a> |
+<a [routerLink]="['/products']">All</a>

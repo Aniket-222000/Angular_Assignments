@@ -1,0 +1,10 @@
+<h2>📄 Blog Posts</h2>
+
+<ul>
+  <li *ngFor="let blog of blogs | slice:start:end">
+    {{ blog }}
+  </li>
+</ul>
+
+<button (click)="prevPage()" [disabled]="start === 0">⬅️ Previous</button>
+<button (click)="nextPage()" [disabled]="end >= blogs.length">Next ➡️</button>
